@@ -10,9 +10,10 @@ namespace ContactManager.Pages.Contacts
 {
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     #region snippet
-    public class DetailsModel : DI_BasePageModel
+    [AllowAnonymous]
+    public class Details2Model : DI_BasePageModel
     {
-        public DetailsModel(
+        public Details2Model(
             ApplicationDbContext context,
             IAuthorizationService authorizationService,
             UserManager<IdentityUser> userManager)
@@ -32,6 +33,11 @@ namespace ContactManager.Pages.Contacts
             }
             Contact = _contact;
 
+            if (!User.Identity!.IsAuthenticated)
+            {
+                return Challenge();
+            }
+
             var isAuthorized = User.IsInRole(Constants.ContactManagersRole) ||
                                User.IsInRole(Constants.ContactAdministratorsRole);
 
@@ -46,34 +52,8 @@ namespace ContactManager.Pages.Contacts
 
             return Page();
         }
-
-        public async Task<IActionResult> OnPostAsync(int id, ContactStatus status)
-        {
-            var contact = await Context.Contact.FirstOrDefaultAsync(
-                                                      m => m.ContactId == id);
-
-            if (contact == null)
-            {
-                return NotFound();
-            }
-
-            var contactOperation = (status == ContactStatus.Approved)
-                                                       ? ContactOperations.Approve
-                                                       : ContactOperations.Reject;
-
-            var isAuthorized = await AuthorizationService.AuthorizeAsync(User, contact,
-                                        contactOperation);
-            if (!isAuthorized.Succeeded)
-            {
-                return Forbid();
-            }
-            contact.Status = status;
-            Context.Contact.Update(contact);
-            await Context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
-        }
     }
     #endregion
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+
 }

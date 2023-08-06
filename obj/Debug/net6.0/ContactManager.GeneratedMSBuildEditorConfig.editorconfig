@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Romana/bdat/first sem/1001/project/AspNetCore.Docs-main/aspnetcore/security/authorization/secure-data/samples/Group2-Project/Pages/Contacts/Details2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNcRGV0YWlsczIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Romana/bdat/first sem/1001/project/AspNetCore.Docs-main/aspnetcore/security/authorization/secure-data/samples/Group2-Project/Pages/Contacts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

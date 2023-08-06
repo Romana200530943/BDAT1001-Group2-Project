@@ -1,4 +1,5 @@
 using ContactManager.Data;
+using ContactManager.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 

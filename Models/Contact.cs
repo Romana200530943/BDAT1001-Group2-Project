@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+namespace ContactManager.Models
+{
 
 
     public class Contact
@@ -25,3 +27,4 @@ using System.ComponentModel.DataAnnotations;
         Approved,
         Rejected
     }
+}

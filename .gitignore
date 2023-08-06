@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ContactManager/FileContentIndex/8a7a3eb1-7bfb-4b73-baa1-bca83906a3cc.vsidx
+/.vs/ContactManager/FileContentIndex/cd8f827a-a7b3-466e-b280-6d42c99da324.vsidx
+/.vs/ContactManager/FileContentIndex/38116c9f-c7b1-4c2a-8cfc-222f8b7beeed.vsidx
+/.vs/ContactManager/FileContentIndex/76aad372-dffc-485d-ac51-5a2be8e02ff9.vsidx
+/.vs/ContactManager/FileContentIndex
+/.vs/ContactManager/v17/.suo
+/obj/Debug/net6.0/ContactManager.csproj.CoreCompileInputs.cache
+/bin/Debug/net6.0/ContactManager.dll
+/bin/Debug/net6.0/ContactManager.pdb
+/obj/Debug/net6.0/ref/ContactManager.dll
+/obj/Debug/net6.0/refint/ContactManager.dll
+/obj/Debug/net6.0/ContactManager.dll
+/obj/Debug/net6.0/ContactManager.pdb
+*.json
+/.vs/ContactManager/DesignTimeBuild/.dtbcache.v2
